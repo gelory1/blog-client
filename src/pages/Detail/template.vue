@@ -5,4 +5,4 @@
 </template>
 
 <script src="./template.js"></script>
-<style src="./template.css"></style>
+<style scoped src="./template.css"></style>

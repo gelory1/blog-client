@@ -1,3 +1,4 @@
+
 <template>
   <div id="index">
     Home首页
@@ -5,4 +6,4 @@
 </template>
 
 <script src="./template.js"></script>
-<style src="./template.css"></style>
+<style lang="less" src="./template.less"></style>
