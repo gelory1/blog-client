@@ -1,23 +1,52 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <Header id="header"></Header>
+    <router-view id="content"></router-view>
+    <Footer id="footer"></Footer>
   </div>
 </template>
 
 <script>
+  import Header from './components/header.vue'
+  import Footer from './components/footer.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+      Header,
+      Footer
+  }
 }
+
+
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less" scoped>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    #header,#footer{
+      text-align: center;
+    }
+    #header {
+      background: #149739;
+      color: white;
+    }
+    #content{
+      flex: 1;
+      padding: 0 12%;
+    }
+    #footer{
+      background-color: #d7d7d7;
+      color: #666;
+      padding: 10px;
+    }
+  }
 </style>
