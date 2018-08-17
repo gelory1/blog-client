@@ -1,7 +1,10 @@
 
 <template>
   <div id="index">
-    Home首页
+    <p>Home首页</p>
+    <div>
+      <el-button round @click="onClickHome">圆角按钮</el-button>
+    </div>
   </div>
 </template>
 
