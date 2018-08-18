@@ -1,14 +1,53 @@
-h1, h2 {
-  font-weight: normal;
+#my header{
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ebebeb;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+#my header img{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+#my header h3{
+  margin-left: 20px;
+  margin-top: 10px;
 }
-a {
-  color: #42b983;
+#my main .items{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+#my main .items .date{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  color: #999;
+}
+#my main .items .date .dateDay{
+  font-size: 30px;
+}
+#my main .items .article{
+  margin-left: 20px;
+  color: black;
+}
+#my main .items .article .articleName{
+  line-height: 48px;
+}
+#my main .items .article .articleContent{
+  height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.actions{
+  margin-top: 15px;
+}
+.actions .editArticle,.actions  .deleteArticle{
+  color: #090;
+  font-size: 12px;
 }

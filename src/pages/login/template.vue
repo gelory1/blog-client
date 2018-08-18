@@ -1,6 +1,13 @@
 <template>
   <div id="login">
-    登录页面
+    <form>
+      <h3>用户名</h3>
+      <el-input placeholder="用户名" type="text"></el-input>
+      <h3>密码</h3>
+      <el-input placeholder="密码" type="password"></el-input>
+      <el-button type="submit">立即登录</el-button>
+    </form>
+    <p>没有账号？<span>注册新用户</span></p>
   </div>
 </template>
 

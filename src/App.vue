@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header id="header"></Header>
-    <router-view id="content"></router-view>
+    <router-view class="content"></router-view>
     <Footer id="footer"></Footer>
   </div>
 </template>
@@ -31,7 +31,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
+
     #header,#footer{
       text-align: center;
     }
@@ -39,8 +40,8 @@ export default {
       background: #149739;
       color: white;
     }
-    #content{
-      flex: 1;
+    .content{
+      flex-grow: 1;
       padding: 0 12%;
     }
     #footer{

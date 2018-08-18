@@ -1,14 +1,46 @@
-h1, h2 {
-  font-weight: normal;
+#user header{
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ebebeb;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+#user header img{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+#user header h3{
+  margin-left: 20px;
+  margin-top: 10px;
 }
-a {
-  color: #42b983;
+#user main .items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px 0;
+}
+#user main .items .date{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  color: #999;
+}
+#user main .items .date .dateDay{
+  font-size: 30px;
+}
+#user main .items .article{
+  margin-left: 20px;
+  color: black;
+}
+#user main .items .article .articleName{
+  line-height: 48px;
+}
+#user main .items .article .articleContent{
+  height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

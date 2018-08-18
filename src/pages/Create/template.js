@@ -1,7 +1,8 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      value1: true,
+      value2: false
     }
   }
 }

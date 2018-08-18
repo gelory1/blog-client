@@ -65,13 +65,14 @@ export default {
     display: flex;
     align-items: center;
   }
-  #header.login .user img.edit,
+  #header.login .user img.edit{
+    width: 2em;
+    height: 2em;
+  }
   #header.login .user img.head{
     width: 3em;
     height: 3em;
     margin-left:10px;
-  }
-  #header.login .user img.head{
     border-radius: 50%;
   }
 </style>
