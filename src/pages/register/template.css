@@ -20,3 +20,6 @@
 #register p span{
   color: #090;
 }
+#register p a{
+  text-decoration: none;
+}
