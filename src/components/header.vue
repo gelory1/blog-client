@@ -37,7 +37,7 @@ export default {
       }
   },
   computed: {
-      ...mapGetters(['user','isLogin'])
+    ...mapGetters(['user','isLogin'])
   },
   created(){
       this.checkLogin()

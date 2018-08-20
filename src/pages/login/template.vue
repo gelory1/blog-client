@@ -1,5 +1,6 @@
 <template>
   <div id="login">
+    <h2>登录账号</h2>
     <form>
       <h3>用户名</h3>
       <el-input placeholder="用户名" type="text" v-model="username"></el-input>

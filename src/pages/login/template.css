@@ -1,3 +1,6 @@
+#login h2{
+  text-align: center;
+}
 #login form{
   margin: 30px auto;
   width: 50%;

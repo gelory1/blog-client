@@ -33,13 +33,20 @@ export default {
         })
     },
     checkLogin({commit,state}){
-      if(state.isLogin) return true
-      auth.get_info().then((res)=>{
-        commit('setLoginStatus',{isLogin: res.isLogin})
-        if(!res.isLogin) return false
-        commit('setUser',{user: res.user})
+      if(state.isLogin) {
         return true
-      })
+      }
+      else{
+        return auth.get_info().then((res)=>{
+          commit('setLoginStatus',{isLogin: res.isLogin})
+          if(!state.isLogin) {return false}
+          else{
+            commit('setUser',{user: res.data})
+            return true
+          }
+        })
+      }
+
     },
     logout({commit,state}){
       auth.logout()
