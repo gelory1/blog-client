@@ -1,24 +1,21 @@
 <template>
   <div id="detail">
     <div class="articleHeader">
-      <img src="../../img/1.jpg">
+      <img :src="user.avatar">
       <div class="articleName">
-        <h3>文章标题</h3>
+        <h3>{{title}}</h3>
         <div>
-          <span class="name">姓名</span>
-          <span class="articleTime">发布于3天前</span>
+          <span class="name">{{user.name}}</span>
+          <span class="articleTime">发布于{{friendlyDate(createdAt)}}</span>
         </div>
       </div>
     </div>
     <div class="articleContent">
-      <p>
-        文章内容文章内容文章内容文章内容文章内容文章内容，
-        文章内容文章内容文章内容文章内容文章内容文章内容，
-        文章内容文章内容文章内容文章内容文章内容文章内容，
-        文章内容文章内容文章内容文章内容文章内容文章内容，
-        文章内容文章内容文章内容文章内容文章内容文章内容，
-        文章内容文章内容文章内容文章内容文章内容文章内容。
+
+      <p>{{description}}</p>
+      <p v-html="markdown">
       </p>
+
     </div>
   </div>
 </template>

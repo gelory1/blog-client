@@ -27,7 +27,6 @@ export default {
   methods: {
     onCurrentChange(newPage){
       blog.getBlogs({page :newPage,atIndex: true}).then((res)=>{
-        console.log(res)
         this.blogs = res.data
         this.total = res.total
         this.page = newPage

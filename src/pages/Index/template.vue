@@ -9,7 +9,7 @@
       <article>
         <div class="articleName">
           <h3>{{blog.title}}</h3>
-          <span class="articleTime">{{blog.createdAt}}</span>
+          <span class="articleTime">{{friendlyDate(blog.createdAt)}}</span>
         </div>
 
         <p class="articleContent">

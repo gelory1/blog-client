@@ -12,7 +12,7 @@ export default {
   methods:{
     onClickCreate(){
       blog.createBlog({
-        title:this.title,description:this.discription,content:this.content,atIndex:this.value1
+        title:this.title,description:this.description,content:this.content,atIndex:this.value1
       }).then((res)=>{
         this.$message.success('创建成功！')
         return res
