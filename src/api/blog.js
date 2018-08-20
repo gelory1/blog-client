@@ -15,8 +15,8 @@ export default {
   getDetail({blogId}){
     return request(URL.Get_detail.replace(':blogId',blogId))
   },
-  createBlog({title = '',content = '',description = ''} = {title:'',content:'',description:''}){
-    return request(URL.Create,'POST',{title,content,description})
+  createBlog({title = '',content = '',description = '',atIndex = false} = {title:'',content:'',description:'',atIndex:false}){
+    return request(URL.Create,'POST',{title,content,description,atIndex})
   },
   UpdateBlog({blogId},{title,content,description,atIndex}){
     return request(URL.Update.replace(':blogId',blogId),'PATCH',{title,content,description,atIndex})

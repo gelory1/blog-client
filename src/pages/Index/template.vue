@@ -1,71 +1,32 @@
 
 <template>
   <div id="index">
-    <div class="items">
+    <router-link  class="items" v-for=" (blog,index) in blogs" :key="blog.id" :to="`/detail/${blog.id}`">
       <div class="head">
-        <img src="../../img/1.jpg">
-        <span class="name">姓名</span>
+        <img :src="blog.user.avatar">
+        <span class="name">{{blog.name}}</span>
       </div>
       <article>
         <div class="articleName">
-          <h3>文章标题</h3>
-          <span class="articleTime">3天前</span>
+          <h3>{{blog.title}}</h3>
+          <span class="articleTime">{{blog.createdAt}}</span>
         </div>
 
         <p class="articleContent">
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容。
+          {{blog.description}}
         </p>
       </article>
+    </router-link>
+    <div class="pages">
+      <el-pagination
+        layout="prev, pager, next"
+        :pager-count="11"
+        :total="total"
+        @current-change="onCurrentChange">
+      </el-pagination>
     </div>
 
-    <div class="items">
-      <div class="head">
-        <img src="../../img/1.jpg">
-        <span class="name">姓名</span>
-      </div>
-      <article>
-        <div class="articleName">
-          <h3>文章标题</h3>
-          <span class="articleTime">3天前</span>
-        </div>
 
-        <p class="articleContent">
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容。
-        </p>
-      </article>
-    </div>
-
-    <div class="items">
-      <div class="head">
-        <img src="../../img/1.jpg">
-        <span class="name">姓名</span>
-      </div>
-      <article>
-        <div class="articleName">
-          <h3>文章标题</h3>
-          <span class="articleTime">3天前</span>
-        </div>
-
-        <p class="articleContent">
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容，
-          文章内容文章内容文章内容文章内容文章内容文章内容。
-        </p>
-      </article>
-    </div>
   </div>
 </template>
 

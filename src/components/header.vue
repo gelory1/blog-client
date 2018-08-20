@@ -11,7 +11,7 @@
     <template v-if="isLogin">
       <h1><router-link to="/">LET'S SHARE</router-link></h1>
       <div class="user">
-        <router-link to="/edit"><img class="edit" src="../img/edit.png" ></router-link>
+        <router-link to="/create"><img class="edit" src="../img/edit.png" ></router-link>
         <div class="myAndLogout">
           <img class="head" :src="user.avatar">
           <ul>
