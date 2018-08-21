@@ -10,12 +10,7 @@
         </div>
       </div>
     </div>
-    <section class="articleContent" >
-
-      <div>{{description}}</div>
-      <div v-html="markdown">
-      </div>
-
+    <section class="articleContent" v-html="markdown">
     </section>
   </div>
 </template>
