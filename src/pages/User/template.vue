@@ -15,7 +15,6 @@
           <div class="articleName">{{blog.title}}</div>
           <div class="articleContent">
             <p>{{blog.description}}</p>
-            <p>{{blog.content}}</p>
           </div>
         </div>
       </router-link>

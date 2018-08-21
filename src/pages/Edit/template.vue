@@ -9,7 +9,7 @@
         <h3>内容简介</h3>
         <el-input type="textarea" class="intro" rows="3" resize="none" v-model="description"></el-input>
         <p class="msg">限200个字</p>
-        <h3>文章内容</h3>
+        <h3>文章内容 (支持 markdown格式 编写)</h3>
         <el-input type="textarea" class="content" rows="5" resize="none" v-model="content"></el-input>
         <p class="msg">限10000个字</p>
         <p>
