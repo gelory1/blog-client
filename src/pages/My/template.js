@@ -53,9 +53,12 @@ export default {
           });
           this.blogs = this.blogs.filter( blog => blog.id !== blogId)
         })
-
-
-    })
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消删除'
+        });
+      });
     }
   }
 }
