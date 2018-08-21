@@ -1,59 +1,45 @@
 <template>
   <div id="my">
     <header>
-      <img src="../../img/1.jpg">
-      <h3>姓名</h3>
+      <img :src="user.avatar">
+      <h3>{{user.username}}</h3>
     </header>
     <main>
-      <div class="items">
-        <div class="date">
-          <span class="dateDay">20</span>
-          <span class="dateMonth">5月</span>
-          <span class="dateYear">2018</span>
-        </div>
-        <div class="article">
-          <div class="articleName">文章标题</div>
-          <div class="articleContent">
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+      <div v-for="blog in blogs" :key="blog.id">
+        <router-link  class="items" :to="`/detail/${blog.id}`">
+          <div class="date">
+            <span class="dateDay">{{splitDate(blog.createdAt).day}}</span>
+            <span class="dateMonth">{{splitDate(blog.createdAt).month}}月</span>
+            <span class="dateYear">{{splitDate(blog.createdAt).year}}</span>
           </div>
+          <div class="article">
+            <div class="articleName">{{blog.title}}</div>
+            <div class="articleContent">
+              <p>{{blog.description}}</p>
+              <p>{{blog.content}}</p>
+            </div>
+          </div>
+        </router-link>
+
           <div class="actions">
-            <span class="editArticle">编辑</span>
-            <span class="deleteArticle">删除</span>
+            <router-link class="editArticle" :to="`/edit/${blog.id}`">编辑</router-link>
+            <span class="deleteArticle" @click="onDeleteBlog(blog.id)">删除</span>
           </div>
-        </div>
 
       </div>
-
-      <div class="items">
-        <div class="date">
-          <span class="dateDay">20</span>
-          <span class="dateMonth">5月</span>
-          <span class="dateYear">2018</span>
-        </div>
-        <div class="article">
-          <div class="articleName">文章标题</div>
-          <div class="articleContent">
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-            内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-          </div>
-          <div class="actions">
-            <span class="editArticle">编辑</span>
-            <span class="deleteArticle">删除</span>
-          </div>
-        </div>
-
-      </div>
-
     </main>
+    <section>
+      <div class="pages">
+        <el-pagination
+          layout="prev, pager, next"
+          :current-page.sync="page"
+          :total="total"
+          @current-change="onCurrentChange">
+        </el-pagination>
+      </div>
+    </section>
+
+
   </div>
 </template>
 

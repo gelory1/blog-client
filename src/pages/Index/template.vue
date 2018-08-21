@@ -4,7 +4,7 @@
     <router-link  class="items" v-for=" (blog,index) in blogs" :key="blog.id" :to="`/detail/${blog.id}`">
       <div class="head">
         <img :src="blog.user.avatar">
-        <span class="name">{{blog.name}}</span>
+        <span class="name">{{blog.user.username}}</span>
       </div>
       <article>
         <div class="articleName">
@@ -20,13 +20,11 @@
     <div class="pages">
       <el-pagination
         layout="prev, pager, next"
-        :pager-count="11"
+        :current-page.sync="page"
         :total="total"
         @current-change="onCurrentChange">
       </el-pagination>
     </div>
-
-
   </div>
 </template>
 

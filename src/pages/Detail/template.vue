@@ -5,7 +5,7 @@
       <div class="articleName">
         <h3>{{title}}</h3>
         <div>
-          <span class="name">{{user.name}}</span>
+          <span class="name"><router-link :to="`/user/${user.id}`">{{user.username}}</router-link> </span>
           <span class="articleTime">发布于{{friendlyDate(createdAt)}}</span>
         </div>
       </div>
