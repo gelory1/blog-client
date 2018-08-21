@@ -10,13 +10,13 @@
         </div>
       </div>
     </div>
-    <div class="articleContent">
+    <section class="articleContent" >
 
-      <p>{{description}}</p>
-      <p v-html="markdown">
-      </p>
+      <div>{{description}}</div>
+      <div v-html="markdown">
+      </div>
 
-    </div>
+    </section>
   </div>
 </template>
 

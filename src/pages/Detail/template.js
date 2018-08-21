@@ -23,7 +23,7 @@ export default {
   },
   computed:{
     markdown(){
-      return marked(`${this.rawContent}`)
+      return marked(this.rawContent)
     }
   }
 }
